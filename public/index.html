@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mentor AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h1 class="logo">
+            🤖 Mentor AI
+        </h1>
+
+        <div class="mentor-list">
+
+            <div class="mentor active"
+                 data-mentor="hitesh">
+
+                <div class="avatar">
+                    👨‍🏫
+                </div>
+
+                <div>
+
+                    <h3>Hitesh Sir</h3>
+
+                    <p>Backend • DevOps</p>
+
+                </div>
+
+            </div>
+
+            <div class="mentor"
+                 data-mentor="piyush">
+
+                <div class="avatar">
+                    🚀
+                </div>
+
+                <div>
+
+                    <h3>Piyush Sir</h3>
+
+                    <p>AI • LLM • System Design</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Chat -->
+
+    <main class="chat-area">
+
+        <header>
+
+            <h2 id="mentor-name">
+
+                👨‍🏫 Hitesh Sir
+
+            </h2>
+
+        </header>
+
+        <div id="chat-box">
+
+            <div class="bot-message">
+
+                👋 Hello!
+
+                Select your mentor and ask anything.
+
+            </div>
+
+        </div>
+
+        <div class="input-box">
+
+            <textarea
+                    id="message"
+                    placeholder="Ask anything..."></textarea>
+
+            <button id="send">
+
+                Send ➜
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
