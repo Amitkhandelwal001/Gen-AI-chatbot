@@ -1,127 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Mentor AI</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONA AI | Premium</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <div class="background-glow">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
 
-<div class="container">
-
-    <!-- Sidebar -->
-
-    <aside class="sidebar">
-
-        <h1 class="logo">
-            🤖 Mentor AI
-        </h1>
-
-        <div class="mentor-list">
-
-            <div class="mentor active"
-                 data-mentor="hitesh">
-
-                <div class="avatar">
-                    👨‍🏫
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <h1 class="logo">
+                <span class="logo-icon">✨</span> PERSONA AI
+            </h1>
+            <div class="mentor-list">
+                <div class="mentor active" data-mentor="hitesh">
+                    <div class="avatar hitesh-bg"><img src="hitesh.jpg" alt="Hitesh Sir" style="width: 100%; height: 100%; object-fit: cover; border-radius: 14px;"></div>
+                    <div class="mentor-info">
+                        <h3>Hitesh Sir</h3>
+                        <p>Backend • DevOps</p>
+                    </div>
                 </div>
-
-                <div>
-
-                    <h3>Hitesh Sir</h3>
-
-                    <p>Backend • DevOps</p>
-
+                <div class="mentor" data-mentor="piyush">
+                    <div class="avatar piyush-bg"><img src="piyush.jpg" alt="Piyush Sir" style="width: 100%; height: 100%; object-fit: cover; border-radius: 14px;"></div>
+                    <div class="mentor-info">
+                        <h3>Piyush Sir</h3>
+                        <p>AI • LLM • Systems</p>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <p>Built with 💻 & AI</p>
+            </div>
+        </aside>
 
+        <!-- Main Chat -->
+        <main class="chat-area glass-panel">
+            <header>
+                <div class="header-content">
+                    <div class="header-avatar hitesh-bg" id="header-avatar"><img src="hitesh.jpg" alt="Hitesh Sir" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;"></div>
+                    <div class="header-text">
+                        <h2 id="mentor-name">Hitesh Sir</h2>
+                        <span class="status"><span class="status-dot"></span> Online</span>
+                    </div>
+                </div>
+            </header>
+
+            <div id="chat-box">
+                <!-- Messages render here -->
             </div>
 
-            <div class="mentor"
-                 data-mentor="piyush">
-
-                <div class="avatar">
-                    🚀
+            <div class="input-container">
+                <div class="input-box">
+                    <textarea id="message" placeholder="Ask your mentor anything..."></textarea>
+                    <button id="send" class="send-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
                 </div>
-
-                <div>
-
-                    <h3>Piyush Sir</h3>
-
-                    <p>AI • LLM • System Design</p>
-
-                </div>
-
             </div>
-
-        </div>
-
-    </aside>
-
-    <!-- Main Chat -->
-
-    <main class="chat-area">
-
-        <header>
-
-            <h2 id="mentor-name">
-
-                👨‍🏫 Hitesh Sir
-
-            </h2>
-
-        </header>
-
-        <div id="chat-box">
-
-            <div class="bot-message">
-
-                👋 Hello!
-
-                Select your mentor and ask anything.
-
-            </div>
-
-        </div>
-
-        <div class="input-box">
-
-            <textarea
-                    id="message"
-                    placeholder="Ask anything..."></textarea>
-
-            <button id="send">
-
-                Send ➜
-
-            </button>
-
-        </div>
-
-    </main>
-
-</div>
-
-<script src="app.js"></script>
-
+        </main>
+    </div>
+    <script src="app.js"></script>
 </body>
-
 </html>

@@ -17,7 +17,7 @@ const PORT = 3000;
 // -----------------------------
 
 const client = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 // -----------------------------
@@ -37,19 +37,19 @@ app.use(express.static(path.join(__dirname, "public")));
 // -----------------------------
 
 const conversations = {
-    hitesh: [
-        {
-            role: "system",
-            content: HITESH_SYSTEM_PROMPT,
-        },
-    ],
+  hitesh: [
+    {
+      role: "system",
+      content: HITESH_SYSTEM_PROMPT,
+    },
+  ],
 
-    piyush: [
-        {
-            role: "system",
-            content: PIYUSH_SYSTEM_PROMPT,
-        },
-    ],
+  piyush: [
+    {
+      role: "system",
+      content: PIYUSH_SYSTEM_PROMPT,
+    },
+  ],
 };
 
 // -----------------------------
@@ -109,10 +109,10 @@ app.post("/chat", async (req, res) => {
 
 app.listen(PORT, () => {
 
-    console.log(`
+  console.log(`
 ====================================
 
-🚀 Mentor AI Running
+🚀 PERSONA AI Running
 
 http://localhost:${PORT}
 
