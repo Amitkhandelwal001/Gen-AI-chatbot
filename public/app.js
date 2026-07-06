@@ -26,6 +26,23 @@ const chatHistories = {
 const mentors = document.querySelectorAll(".mentor");
 const mentorName = document.getElementById("mentor-name");
 const headerAvatar = document.getElementById("header-avatar");
+// =============================
+// Auth Check
+// =============================
+if (!localStorage.getItem('personaToken')) {
+    window.location.href = 'auth.html';
+}
+
+const logoutBtn = document.getElementById('logout-btn');
+if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('personaToken');
+        window.location.href = 'auth.html';
+    });
+}
+
+const chatForm = document.getElementById("chat-form");
+const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send");
 const messageInput = document.getElementById("message");
 const chatBox = document.getElementById("chat-box");

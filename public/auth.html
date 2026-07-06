@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | PERSONA AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Left Side: Form -->
+        <div class="auth-form-side glass-panel">
+            <h1 class="logo auth-logo"><span class="logo-icon">✨</span> PERSONA AI</h1>
+            <p class="auth-subtitle">Welcome back! Please login or sign up.</p>
+            
+            <div id="auth-alert" class="auth-alert" style="display: none;"></div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <h2>Sign In</h2>
+                <div class="input-box auth-input">
+                    <input type="text" id="login-username" placeholder="Username" required>
+                </div>
+                <div class="input-box auth-input">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="send-btn auth-btn">Login</button>
+                <p class="auth-switch">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+            </form>
+
+            <!-- Signup Form (Hidden by default) -->
+            <form id="signup-form" class="auth-form" style="display: none;">
+                <h2>Create Account</h2>
+                <div class="input-box auth-input">
+                    <input type="text" id="signup-username" placeholder="Choose a Username" required>
+                </div>
+                <div class="input-box auth-input">
+                    <input type="password" id="signup-password" placeholder="Create a Password" required>
+                </div>
+                <button type="submit" class="send-btn auth-btn">Sign Up</button>
+                <p class="auth-switch">Already have an account? <a href="#" id="show-login">Sign In</a></p>
+            </form>
+        </div>
+
+        <!-- Right Side: Showcase -->
+        <div class="auth-showcase-side">
+            <div class="showcase-content">
+                <h2>An AI chat bot inspired by Hitesh Chaudhary and Piyush Garg.</h2>
+                <p>Level up your system design and development skills with personalized mentorship.</p>
+                <!-- We assume the user drops hero-example.png here -->
+                <div class="showcase-image-wrapper glass-panel">
+                    <img src="hero-example.png" alt="Persona AI Showcase" class="showcase-image" onerror="this.src='https://placehold.co/800x500/111/444?text=Upload+hero-example.png+here'">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>
